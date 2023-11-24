@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import React from 'react';
+import Home from "./components/Home/Home";
+import Uploading from "./components/Uploading/Uploading";
+import UploadSuccess from "./components/UploadSuccess/UploadSuccess";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    const [loading, setLoading] = useState(0);
+    const [imgUrl, setImgUrl] = useState(null);
+    return ( <
+        div className = "parent-container" > {
+            loading === 0 ? ( <
+                Home setLoading = { setLoading }
+                setImgUrl = { setImgUrl }
+                />
+            ) : null
+        } { loading === 1 ? < Uploading / > : null } {
+            loading === 2 ? < UploadSuccess imgUrl = { imgUrl }
+            /> : null} </div >
+        );
+    }
 
-export default App;
+    export default App;

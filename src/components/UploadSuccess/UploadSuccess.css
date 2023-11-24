@@ -1,0 +1,56 @@
+.upload-success-box {
+  width: 400px;
+  height: 455px;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.upload-success-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+.uploaded-img {
+  width: 338px;
+  height: 224.4px;
+  border-radius: 12px;
+  border: none;
+}
+
+.img-link-container {
+  width: 338px;
+  height: 34px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.url-text-input {
+  width: 100%;
+  height: 34px;
+  background: #f6f8fb;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  text-align: center;
+}
+
+.copy-btn {
+  cursor: pointer;
+  width: 74px;
+  height: 34px;
+  background: #2f80ed;
+  border-radius: 4px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 10px;
+}
