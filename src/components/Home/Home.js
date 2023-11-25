@@ -31,9 +31,10 @@ const Home = ({ setLoading, setImgUrl }) => {
     }
 
   return (
+    <>
     <div className="img-upload-box">
-      <div className="img-upload-box-heading">Sube una radiografia</div>
-      <div className="img-upload-box-subtitle">Recuerda que la imagen debe ser JPEG o PNG</div>
+      <div className="img-upload-box-heading">Upload a tomography</div>
+      <div className="img-upload-box-subtitle">Only available in JPEG or PNG image formats</div>
       <div
         className="img-upload-stage-container"
         onDragEnter={(e) => {
@@ -53,14 +54,14 @@ const Home = ({ setLoading, setImgUrl }) => {
         <div className="img-upload-stage">
           <img src={image} alt="" className="placeholder-img" />
           <div className="img-upload-stage-text">
-            Arrastra y suelta tu imagen aqui
+            Drag and Drop your image here
           </div>
         </div>
       </div>
       <div className="or-class">O</div>
       <div className="upload-button-container">
         <label htmlFor="img-upload" className="upload-button">
-          <span className="upload-button-text">Selecciona...</span>
+          <span className="upload-button-text">Select a file...</span>
           {/* Proceso de seleccion de imagenes */}
         </label>
         <input
@@ -71,6 +72,7 @@ const Home = ({ setLoading, setImgUrl }) => {
         />
       </div>
     </div>
+    </>
   );
 };
 

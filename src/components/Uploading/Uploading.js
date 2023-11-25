@@ -20,8 +20,8 @@ const Uploading = () => {
 
   return (
     <div className="uploading-box">
-      <div className="uploading-text">Subiendo...</div>
-      {/* Upload progress bar will be placed here */}
+      <div className="uploading-text">Uploading Image...</div>
+      {/* Barra de carga de las imagenes */}
       <div className="loading-strip">
         <div
           className="loading-bar"
