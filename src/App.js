@@ -10,6 +10,7 @@ import Navbar from './components/Navbar/Nabvar';
 function App() {
     const [loading, setLoading] = useState(0);
     const [imgUrl, setImgUrl] = useState(null);
+    const [result, setResult] = useState(null);
     return (
         <>
             <ScrollToTop />
@@ -18,10 +19,11 @@ function App() {
                 loading === 0 ? ( <
                     Home setLoading = { setLoading }
                     setImgUrl = { setImgUrl }
+                    setResult = {setResult}
                     />
                 ) : null
             } { loading === 1 ? <Uploading /> : null } {
-                loading === 2 ? <UploadSuccess imgUrl = { imgUrl }/> : null} </div >
+                loading === 2 ? <UploadSuccess imgUrl = { imgUrl } result = { result}/> : null} </div >
             </>
         );
     }

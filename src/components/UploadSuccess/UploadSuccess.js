@@ -1,7 +1,21 @@
 import "./UploadSuccess.css";
 import SuccessIcon from "./SuccessIcon";
 
-const UploadSuccess = ({ imgUrl }) => {
+const UploadSuccess = ({ imgUrl, result }) => {
+
+  let classificationText;
+
+  if (result === 0) {
+    classificationText = "It's Covid";
+  } else if (result === 1) {
+    classificationText = "It's normal";
+  } else if (result === 2) {
+    classificationText = "It's lung opacity";
+  } else if (result === 3) {
+    classificationText = "It's viral neumonía";
+  } else {
+    classificationText = "Unidentified";
+  }
 
   return (
     <div className="upload-success-box">
@@ -12,7 +26,7 @@ const UploadSuccess = ({ imgUrl }) => {
         <input
           type="text"
           readOnly
-          value={`${imgUrl}`} // String de la imagen = Clasificacion
+          value={ classificationText } // String de la imagen = Clasificacion
           className="url-text-input"
         />
       </form>

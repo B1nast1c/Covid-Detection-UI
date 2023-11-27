@@ -1,9 +1,9 @@
 import "./Home.css";
 import image from "../../assets/image.svg";
 
-const url = '';
+const url = 'http://127.0.0.1:5000/cargarImagen';
 
-const Home = ({ setLoading, setImgUrl }) => {
+const Home = ({ setLoading, setImgUrl, setResult }) => {
   function preventDefault(e) {
     e.preventDefault();
     e.stopPropagation();
@@ -15,18 +15,21 @@ const Home = ({ setLoading, setImgUrl }) => {
     formData.append("file", file);
     formData.append("upload_preset", process.env.REACT_APP_UPLOAD_PRESET);
 
-    /*fetch(url, {
+    fetch(url, {
       method: "POST",
       body: formData,
     })
       .then((response) => {
-        // return response.json();
+         return response.json();
       })
       .then((data) => {
-        setImgUrl(data.url);
+        console.log("API Response:", data); // Agrega esta línea para imprimir la respuesta en la consola
+        setImgUrl(data.img);
+        setResult(data.data)
+        console.log(data.data);
       })
       .then(() => setLoading(2))
-      .catch((err) => console.log(err));*/
+      .catch((err) => console.log(err));
       setLoading(2)
     }
 
