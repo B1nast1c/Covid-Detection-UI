@@ -99,8 +99,8 @@ def analisis_covid(images_path):
         print('El resultado es: ', predicted.item())
         return predicted.item()
 
-
-@app.before_first_request
+#@app.before_first_request --- Version antigua
+@app.before_request
 def before_first_request():
     '''Carga del modelo antes de cualquier peticion'''
     global model, device
